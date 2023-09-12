@@ -23,7 +23,7 @@ class MovieRepositoryTest {
     @Transactional
     @Test
     public void insertMovies() {
-        IntStream.rangeClosed(1, 10).forEach(i -> { // 10개 데이터 삽입
+        IntStream.rangeClosed(1, 100).forEach(i -> { // 10개 데이터 삽입
             Movie movie = Movie.builder().title("제목.." + i).build(); // movie 데이터 삽입
             System.out.println("-------------------");
             movieRepository.save(movie); // 삽입된 데이터 저장 -> save되면 생성되는 mno값을 이용하여 movieImage 추가

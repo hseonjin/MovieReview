@@ -19,11 +19,11 @@ class ReviewRepositoryTest {
     @Test
     public void insertMovieReviews() {
         // 리뷰 등록
-        IntStream.rangeClosed(1, 50).forEach(i -> {
+        IntStream.rangeClosed(1, 200).forEach(i -> {
             // 영화번호
-            Long mno = (long)(Math.random()*20) + 1;
+            Long mno = (long)(Math.random()*100) + 1;
             // 리뷰어번호
-            Long mid = ((long)(Math.random()*20) + 1);
+            Long mid = ((long)(Math.random()*100) + 1);
             Member member = Member.builder().mid(mid).build();
 
             Review movieReview = Review.builder()
